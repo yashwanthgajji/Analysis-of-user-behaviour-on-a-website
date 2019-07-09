@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SMART BUY SOLUTIONS</title>
+<style>
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+.header{
+	text-align: center;
+  position: fixed;
+  top:0;
+  width: 100%;
+  background-color: rgb(33,228,124);
+}
+
+
+
+.close {
+    position: absolute;
+    right: 25px;Login
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+input[type=text]{
+    width: 100%;
+    height: 30px;
+}
+input[type=password]{
+    width: 100%;
+    height: 30px;
+}
+
+
+
+.catog{
+	background-color: rgb(228,156,33);
+  margin-top: 0;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%
+    width: 200px;
+    background-color: lightgrey;
+}
+
+li{
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+li:hover {
+    background-color: #555;
+    color: white;
+}
+button{
+  background-color: rgb(119,136,153);
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+}
+button:hover {
+  background-color: green;
+}
+
+
+
+
+
+
+body {
+  font-family: Verdana, sans-serif;
+  margin: 0;
+  background-image: url("background.jpg");
+  background-position: center;
+   background-size: cover;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row > .column {
+  padding: 0 8px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: lightgrey;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 10);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: black;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+img {
+  margin-bottom: -4px;
+  width: 100px;
+  height: 300px;
+  border-radius: 10px;
+}
+
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+</style>
+</head>
+
+
+
+
+<body id="main">
+
+
+
+<div class="header">
+			<h1 style="width: 100%;"><span style="font-size:30px;cursor:pointer;float: left" onclick="openNav()">&#9776;Menu</span><span style="text-align: center;">SMART BUY SOLUTIONS</span><span style="float: right;font-size: 30px;display: none;" id="logname">Welcome to Admin</span></h1>
+</div>
+<hr style="margin-top: 80px;">
+<div id="mySidenav" class="sidenav">
+  			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  			<a href="#">HOME</a>
+  			<a id="loginbut" href="javascript:void(0)" onclick="openModal(0)">LOGIN</a>
+  			<a href="javascript:void(0)" onclick="openModal(11)">CONTACT</a>
+  			<a href="javascript:void(0)" onclick="document.getElementById('myModal12').style.display='block'">CART</a>
+        <a id="logbut" href="javascript:void(0)" onclick="logout()" style="display: none;">LOGOUT</a>
+</div>
+
+
+<div id="myModal0" class="modal">
+  <h1 style="text-align: center;"> ADMIN LOGIN</h1>
+  <div style="text-align: center;position: relative;margin-left: 30%;margin-right: 30%;background-color: lightblue;">
+        <span onclick="document.getElementById('myModal0').style.display='none'" class="close">&times;</span>
+        <img src="download.png" style="border-radius: 50%;margin-top: 10px;" />
+  </div>  
+  <div style="margin-left: 30%;margin-right: 30%;text-align: center;background-color: lightblue;">
+        <label>USERNAME</label></br>
+        <input type="text" id="uname" placeholder="enter username" required></br>
+        <label>PASSWORD</label><br>
+        <input type="password" id="pass" placeholder="enter password" required><br>
+        <button onclick="checklog()">LOGIN</button><span><a href="#" style="float: right">forget password?..</a></span>
+  </div>
+</div>
+
+
+<div id="myModal11" class="modal">
+  <div>
+        <h4>Give Your Suggestions...<span onclick="document.getElementById('myModal11').style.display='none'" class="close" style="float: right;">&times;</span></h4>
+        <label>NAME</label>
+        <input type="text" id="con1">
+        <label>EMAIL</label>
+        <input type="text" id="con2">
+        Suggestions..
+        <textarea rows="6" style="width: 100%" id="con3"></textarea>
+        <button onclick="consub()">SUBMIT</button><button onclick="concan()">cancel</button>
+  </div>
+</div>
+
+<div id="myModal12" class="modal">
+  <div id="cartgo">
+    <h4>YOUR CART IS HERE...<span onclick="document.getElementById('myModal12').style.display='none'" class="close" style="float: right;">&times;</span></h4>
+    <p>Press Remove Button to remove first item in the cart</p>
+    <button onclick="remcart()">Remove First one</button><button onclick="document.getElementById('myModal12').style.display='none';">Continue Shopping</button>
+  </div>
+</div>
+
+
+
+
+<div id="catog" class="catog">
+			<h3>Category</h3>
+			<p>Choose a category...</p>
+			<ul>
+				<li><a href="#data1">Electronics</a></li>
+				<li><a href="#data2">Fashion</a></li>
+				<li><a href="#data3">Toys</a></li>
+				<li><a href="#data4">Books</a></li>
+				<li><a href="#data5">Furniture</a></li>
+			</ul>
+</div>
+
+
+
+
+
+<br><hr>
+
+<div id="data1">
+<h2 style="text-align:center">Electronics</h2>
+
+<div class="row">
+  <div class="column">
+    <img src="electronics/electronics-1.jpg" style="width:100%" onclick="openModal(1);currentSlide(1)" class="hover-shadow cursor">
+    <h4>Bluetooth Headphones</h4>
+    <h5>Rs:1599/-</h5>
+  </div>
+  <div class="column">
+    <img src="electronics/electronics-2.jpg" style="width:100%" onclick="openModal(1);currentSlide(2)" class="hover-shadow cursor">
+    <h4>Sony Camera</h4>
+    <h5>Rs:45999/-</h5>
+  </div>
+  <div class="column">
+    <img src="electronics/electronics-3.jpg" style="width:100%" onclick="openModal(1);currentSlide(3)" class="hover-shadow cursor">
+    <h4>Blutooth</h4>
+    <h5>Rs:999/-</h5>
+  </div>
+  <div class="column">
+    <img src="electronics/electronics-4.jpg" style="width:100%" onclick="openModal(1);currentSlide(4)" class="hover-shadow cursor">
+    <h4>USB Cable</h4>
+    <h5>Rs:399/-</h5>
+  </div>
+</div>
+
+<div id="myModal1" class="modal">
+  <span class="close cursor" onclick="closeModal(1)">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 4</div>
+      <div id="d1">
+        <img src="electronics/electronics-1.jpg" style="float: left;width: 200px;height: 200px;">
+        <h2>Bluetooth Headphones</h2>
+        <h4>Rs:1599/-</h4>
+        <p>Bluetooth Headphones with speaker<br></p>
+        <h5>Details :</h5>
+        <p>Bluetooth<br>Wired</p>
+      </div>
+        <button onclick="addcart(1)">ADD TO CART</button>
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 4</div>
+      <div id="d2">
+      <img src="electronics/electronics-2.jpg" style="float: left;width: 200px;height: 200px;">
+        <h2>Sony Camera</h2>
+        <h4>Rs:45999/-</h4>
+        <p>A High Qualified Camera<br></p>
+        <h5>Details :</h5>
+        <p>Bluetooth<br>Lens</p>
+      </div>
+        <button onclick="addcart(2)">ADD TO CART</button>
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 4</div>
+      <div id="d3">
+      <img src="electronics/electronics-3.jpg" style="float: left;width: 200px;height: 200px;">
+        <h2>Bluetooth</h2>
+        <h4>Rs:999/-</h4>
+        <p>Bluetooth with speaker<br></p>
+        <h5>Details :</h5>
+        <p>Bluetooth<br>Wireless</p>
+      </div>
+        <button onclick="addcart(3)">ADD TO CART</button>
+    </div>
+    
+    <div class="mySlides">
+      <div class="numbertext">4 / 4</div>
+      <div id="d4">
+      <img src="electronics/electronics-4.jpg" style="float: left;width: 200px;height: 200px;">
+        <h2>Bluetooth Headphones</h2>
+        <h4>Rs:1599/-</h4>
+        <p>USB Cable<br></p>
+        <h5>Details :</h5>
+        <p>USB pin<br>1 m length</p>
+      </div>
+        <button onclick="addcart(4)">ADD TO CART</button>
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+
+    <div class="column">
+      <img class="demo cursor" src="electronics/electronics-1.jpg" style="width:100%" onclick="currentSlide(1)" alt="Shirts">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="electronics/electronics-2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Shirts">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="electronics/electronics-3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Jeans">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="electronics/electronics-4.jpg" style="width:100%" onclick="currentSlide(4)" alt="Jeans">
+    </div>
+  </div>
+</div>
+</div>
+
+<br><hr>
+
+<div id="data2">
+<h2 style="text-align:center">Fashion</h2>
+
+<div class="row">
+  <div class="column">
+    <img src="fashion/shirts-1.jpg" style="width:100%" onclick="openModal(2);currentSlide(1)" class="hover-shadow cursor">
+    <h4>Dark Blue Shirt</h4>
+      <h5>Rs:1299/-</h5>
+  </div>
+  <div class="column">
+    <img src="fashion/shirts-2.jpg" style="width:100%" onclick="openModal(2);currentSlide(2)" class="hover-shadow cursor">
+      <h4>Black Shirt</h4>
+      <h5>Rs:899/-</h5>
+  </div>
+  <div class="column">
+    <img src="fashion/jeans-1.jpg" style="width:100%" onclick="openModal(2);currentSlide(3)" class="hover-shadow cursor">
+      <h4>Blue Jeans</h4>
+      <h5>Rs:1349</h5>
+  </div>
+  <div class="column">
+    <img src="fashion/jeans-2.jpg" style="width:100%" onclick="openModal(2);currentSlide(4)" class="hover-shadow cursor">
+      <h4>Black Jeans</h4>
+      <h5>Rs:1699</h5>
+  </div>
+</div>
+
+<div id="myModal2" class="modal">
+  <span class="close cursor" onclick="closeModal(2)">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 4</div>
+      <div id='d5'>
+      <img src="fashion/shirts-1.jpg" style="float: left;width: 200px;height: 200px;">
+        <h2>Dark Blue Shirt</h2>
+        <h4>Rs:1299/-</h4>
+        <p>Checks shirt blue colour<br></p>
+        <h5>Details :</h5>
+        <p>Blue<br>full hands</p>
+      </div>
+        <button onclick="addcart(5)">ADD TO CART</button>
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 4</div>
+      <div id="d6">
+      <img src="fashion/shirts-2.jpg" style="float: left;width: 200px;height: 200px;">
+        <h2>Black Shirt</h2>
+        <h4>Rs:899/-</h4>
+        <p>Dark Black shirt full hands<br></p>
+        <h5>Details :</h5>
+        <p>Black<br>full hands</p>
+      </div>
+        <button onclick="addcart(6)">ADD TO CART</button>
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 4</div>
+      <div id="d7">
+      <img src="fashion/jeans-1.jpg" style="float: left;width: 200px;height: 200px;">
+        <h2>Blue Jeans</h2>
+        <h4>Rs:1349/-</h4>
+        <p>Blue torn jeans<br></p>
+        <h5>Details :</h5>
+        <p>Blue<br>Torn</p>
+      </div>
+        <button onclick="addcart(7)">ADD TO CART</button>
+    </div>
+    
+    <div class="mySlides">
+      <div class="numbertext">4 / 4</div>
+      <div id="d8">
+      <img src="fashion/jeans-2.jpg" style="float: left;width: 200px;height: 200px;">
+        <h2>Black Jeans</h2>
+        <h4>Rs:1699/-</h4>
+        <p>Black torn jeans<br></p>
+        <h5>Details :</h5>
+        <p>Black<br>Torn</p>
+      </div>
+        <button onclick="addcart(8)">ADD TO CART</button>
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+
+    <div class="column">
+      <img class="demo cursor" src="fashion/shirts-1.jpg" style="width:100%" onclick="currentSlide(1)" alt="Shirts">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="fashion/shirts-2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Shirts">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="fashion/jeans-1.jpg" style="width:100%" onclick="currentSlide(3)" alt="Jeans">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="fashion/jeans-2.jpg" style="width:100%" onclick="currentSlide(4)" alt="Jeans">
+    </div>
+  </div>
+</div>
+</div>
+
+<br><hr>
+
+<div id="data3">
+<h2 style="text-align:center">Toys</h2>
+
+<div class="row">
+  <div class="column">
+    <img src="toys/toys-1.jpg" style="width:100%" onclick="openModal(3);currentSlide(1)" class="hover-shadow cursor">
+      <h4>Tractor</h4>
+      <h5>Rs:699</h5>
+  </div>
+  <div class="column">
+    <img src="toys/toys-2.jpg" style="width:100%" onclick="openModal(3);currentSlide(2)" class="hover-shadow cursor">
+      <h4>Red Car</h4>
+      <h5>Rs:899</h5>
+  </div>
+  <div class="column">
+    <img src="toys/toys-3.jpg" style="width:100%" onclick="openModal(3);currentSlide(3)" class="hover-shadow cursor">
+      <h4>Dinosour</h4>
+      <h5>1299</h5>
+  </div>
+  <div class="column">
+    <img src="toys/toys-4.jpg" style="width:100%" onclick="openModal(3);currentSlide(4)" class="hover-shadow cursor">
+      <h4>Kitchen Mixer</h4>
+      <h5>Rs:699</h5>
+  </div>
+</div>
+
+<div id="myModal3" class="modal">
+  <span class="close cursor" onclick="closeModal(3)">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 4</div>
+      <div id="d9">
+      <img src="toys/toys-1.jpg" style="float: left;width: 200px;height: 200px;">
+        <h2>Tractor</h2>
+        <h4>Rs:699/-</h4>
+        <p>Toys for kids<br></p>
+        <h5>Details :</h5>
+        <p>Red<br>For Kids</p>
+      </div>
+        <button onclick="addcart(9)">ADD TO CART</button>
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 4</div>
+      <div id="d10">
+      <img src="toys/toys-2.jpg" style="float: left;width: 200px;height: 200px;">
+        <h2>Car</h2>
+        <h4>Rs:899/-</h4>
+        <p>Toys for Kids<br></p>
+        <h5>Details :</h5>
+        <p>Red<br>Kids</p>
+      </div>
+        <button onclick="addcart(10)">ADD TO CART</button>
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 4</div>
+      <div id="11">
+      <img src="toys/toys-3.jpg" style="float: left;width: 200px;height: 200px;">
+        <h2>Dinosour</h2>
+        <h4>Rs:1299/-</h4>
+        <p>Toys for Kids<br></p>
+        <h5>Details :</h5>
+        <p>Brown<br>Kids</p>
+      </div>
+        <button onclick="addcart(11)">ADD TO CART</button>
+    </div>
+    
+    <div class="mySlides">
+      <div class="numbertext">4 / 4</div>
+      <div id="12">
+      <img src="toys/toys-4.jpg" style="float: left;width: 200px;height: 200px;">
+        <h2>Kitchen Mixer</h2>
+        <h4>Rs:699/-</h4>
+        <p>Toys for Kids</p>
+        <h5>Details :</h5>
+        <p>Red<br>Kids</p>
+      </div>
+        <button onclick="addcart(12)">ADD TO CART</button>
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+
+    <div class="column">
+      <img class="demo cursor" src="toys/toys-1.jpg" style="width:100%" onclick="currentSlide(1)" alt="Tractor">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="toys/toys-2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Car">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="toys/toys-3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Dinosour">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="toys/toys-4.jpg" style="width:100%" onclick="currentSlide(4)" alt="Mixer">
+    </div>
+  </div>
+</div>
+</div>
+
+<br><hr>
+
+<div id="data4">
+<h2 style="text-align:center">Books</h2>
+
+<div class="row">
+  <div class="column">
+    <img src="books/books-1.jpg" style="width:100%" onclick="openModal(4);currentSlide(1)" class="hover-shadow cursor">
+      <h4>The Dark Night Of The Shed</h4>
+      <h5>Rs:1399</h5>
+  </div>
+  <div class="column">
+    <img src="books/books-2.jpg" style="width:100%" onclick="openModal(4);currentSlide(2)" class="hover-shadow cursor">
+      <h4>An Imperfect Life</h4>
+      <h5>Rs:2099</h5>
+  </div>
+  <div class="column">
+    <img src="books/books-3.jpg" style="width:100%" onclick="openModal(4);currentSlide(3)" class="hover-shadow cursor">
+      <h4>The Positive Dog</h4>
+      <h5>Rs:1499</h5>
+  </div>
+  <div class="column">
+    <img src="books/books-4.jpg" style="width:100%" onclick="openModal(4);currentSlide(4)" class="hover-shadow cursor">
+      <h4>The Meadow</h4>
+      <h5>Rs:2199</h5>
+  </div>
+</div>
+
+<div id="myModal4" class="modal">
+  <span class="close cursor" onclick="closeModal(4)">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 4</div>
+      <div id="d13">
+      <img src="books/books-1.jpg" style="float: left;width: 200px;height: 200px;">
+        <h2>The Dark Night Of The Shed</h2>
+        <h4>Rs:1399/-</h4>
+        <p>A Good book of a shed</p>
+        <h5>Details :</h5>
+        <p>Good one<br>book for all ages</p>
+      </div>
+        <button onclick="addcart(13)">ADD TO CART</button>
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 4</div>
+      <div id="d14">
+      <img src="books/books-2.jpg" style="float: left;width: 200px;height: 200px;">
+        <h2>An Imperfect Life</h2>
+        <h4>Rs:1399/-</h4>
+        <p>A Good book of a life</p>
+        <h5>Details :</h5>
+        <p>Good one<br>book for all ages</p>
+      </div>
+        <button onclick="addcart(14)">ADD TO CART</button>
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 4</div>
+      <div id="d15">
+      <img src="books/books-3.jpg" style="float: left;width: 200px;height: 200px;">
+        <h2The Positive Dog</h2>
+        <h4>Rs:2099/-</h4>
+        <p>A Good book of dog</p>
+        <h5>Details :</h5>
+        <p>Good one<br>book for all ages</p>
+      </div>
+        <button onclick="addcart(15)">ADD TO CART</button>
+    </div>
+    
+    <div class="mySlides">
+      <div class="numbertext">4 / 4</div>
+      <div id="d17">
+      <img src="books/books-4.jpg" style="float: left;width: 200px;height: 200px;">
+        <h2>The Meadow</h2>
+        <h4>Rs:1499/-</h4>
+        <p>A Good book</p>
+        <h5>Details :</h5>
+        <p>Good one<br>book for all ages</p>
+      </div>
+        <button onclick="addcart(16)">ADD TO CART</button>
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+
+    <div class="column">
+      <img class="demo cursor" src="books/books-1.jpg" style="width:100%" onclick="currentSlide(1)" alt="Tractor">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="books/books-2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Car">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="books/books-3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Dinosour">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="books/books-4.jpg" style="width:100%" onclick="currentSlide(4)" alt="Mixer">
+    </div>
+  </div>
+</div>
+</div>
+
+<br><hr>
+
+<div id="data5">
+<h2 style="text-align:center">Furniture</h2>
+
+<div class="row">
+  <div class="column">
+    <img src="furniture/furniture-1.jpg" style="width:100%" onclick="openModal(5);currentSlide(1)" class="hover-shadow cursor">
+    <h4>Cardboard Shelf</h4>
+    <h5>Rs:29999</h5>
+  </div>
+  <div class="column">
+    <img src="furniture/furniture-2.jpg" style="width:100%" onclick="openModal(5);currentSlide(2)" class="hover-shadow cursor">
+      <h4>Sofa Set</h4>
+      <h5>Rs:30999</h5>
+  </div>
+  <div class="column">
+    <img src="furniture/furniture-3.jpg" style="width:100%" onclick="openModal(5);currentSlide(3)" class="hover-shadow cursor">
+      <h4>Bed</h4>
+      <h5>Rs:59999</h5>
+  </div>
+  <div class="column">
+    <img src="furniture/furniture-4.jpg" style="width:100%" onclick="openModal(5);currentSlide(4)" class="hover-shadow cursor">
+      <h4>Dining Table Set</h4>
+      <h5>Rs:49999</h5>
+  </div>
+</div>
+
+<div id="myModal5" class="modal">
+  <span class="close cursor" onclick="closeModal(5)">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 4</div>
+      <div id="17>"
+      <img src="furniture/furniture-1.jpg" style="float: left;width: 200px;height: 200px;">
+        <h2>Cardboard Shelf</h2>
+        <h4>Rs:29999/-</h4>
+        <p>Standard furniture</p>
+        <h5>Details :</h5>
+        <p>hard board<br>high rated</p>
+      </div>
+        <button onclick="addcart(17)">ADD TO CART</button>
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 4</div>
+      <div id="18">
+      <img src="furniture/furniture-2.jpg" style="float: left;width: 200px;height: 200px;">
+        <h2>Sofa Set</h2>
+        <h4>Rs:30999/-</h4>
+        <p>Standard furniture</p>
+        <h5>Details :</h5>
+        <p>hard board<br>high rated</p>
+      </div>
+        <button onclick="addcart(18)">ADD TO CART</button>
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 4</div>
+      <div id="19">
+      <img src="furniture/furniture-3.jpg" style="float: left;width: 200px;height: 200px;">
+        <h2>Bed</h2>
+        <h4>Rs:59999/-</h4>
+        <p>Standard furniture</p>
+        <h5>Details :</h5>
+        <p>hard board<br>high rated</p>
+      </div>
+        <button onclick="addcart(19)">ADD TO CART</button>
+    </div>
+    
+    <div class="mySlides">
+      <div class="numbertext">4 / 4</div>
+      <div id="20">
+      <img src="furniture/furniture-4.jpg" style="float: left;width: 200px;height: 200px;">
+        <h2>Dining Table Set</h2>
+        <h4>Rs:29999/-</h4>
+        <p>Standard furniture</p>
+        <h5>Details :</h5>
+        <p>hard board<br>high rated</p>
+      </div>
+        <button onclick="addcart(20)">ADD TO CART</button>
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+
+    <div class="column">
+      <img class="demo cursor" src="furniture/furniture-1.jpg" style="width:100%" onclick="currentSlide(1)" alt="Tractor">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="furniture/furniture-2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Car">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="furniture/furniture-3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Dinosour">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="furniture/furniture-4.jpg" style="width:100%" onclick="currentSlide(4)" alt="Mixer">
+    </div>
+  </div>
+</div>
+</div>
+
+<br><hr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+    document.body.style.backgroundColor = "lightgrey";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+    document.body.style.backgroundColor = "white";
+}
+
+
+
+function checklog(){
+  uname=uname.value;
+  pass=pass.value;
+  if(uname!="yash" || pass!="1234"){
+    alert("incorrect login credentials");
+  }
+  else{
+    document.getElementById('logname').style.display="block";
+    document.getElementById('myModal0').style.display="none";
+    document.getElementById('uname').value="";
+    document.getElementById('pass').value="";
+    document.getElementById('logbut').style.display="block";
+    document.getElementById('loginbut').style.display="none";
+  }
+}
+function logout(){
+  document.getElementById('logname').style.display="none";
+  document.getElementById('logbut').style.display="none";
+    document.getElementById('loginbut').style.display="block";
+}
+
+
+
+function consub(){
+  alert("Your Suggestions are submitted");
+  document.getElementById("myModal11").style.display="none";
+  document.getElementById("con1").value="";
+  document.getElementById("con2").value="";
+  document.getElementById("con3").value="";
+}
+function concan(){
+  document.getElementById("myModal11").style.display="none";
+  document.getElementById("con1").value="";
+  document.getElementById("con2").value="";
+  document.getElementById("con3").value="";
+}
+
+
+
+function addcart(x){
+  var itm = document.getElementById("d"+x);
+  var cln = itm.cloneNode(true);
+  document.getElementById("cartgo").appendChild(cln);
+  alert("added to cart");
+}
+function remcart(){
+  var list = document.getElementById("cartgo");
+    list.removeChild(list.childNodes[8]);
+}
+
+
+
+
+function openModal(x) {
+  document.getElementById('myModal'+x).style.display = "block";
+}
+
+function closeModal(x) {
+  document.getElementById('myModal'+x).style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+    
+</body>
+</html>
